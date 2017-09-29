@@ -16,8 +16,6 @@ buildRustPackage rec {
   buildInputs = stdenv.lib.optionals stdenv.isDarwin
     (with darwin.apple_sdk.frameworks; [ Security ]);
 
-  doCheck = false;
-
   depsSha256 = "1qzzpnkyw1bn5fnj06c80f7985v1q0rqcphrrrkpbi33lg5mzgbv";
 
   meta = with stdenv.lib; {
